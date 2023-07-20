@@ -19,17 +19,17 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.nav-title>ul{
+.nav-title>ul, .footer-nav>ul{
     display: flex;
 }
-.nav-title li{
+.nav-title li, .footer-nav>ul>li{
     list-style: none;
     margin-right: 30px;
     font-weight: 500;
     font-size: 1rem;
 }
 
-.nav-title{
+.nav-title, .footer-title{
     display: flex;
     align-items:center;
 }
@@ -140,6 +140,46 @@ margin: none;
 .banner-img img{
     width:80%
 }
+
+
+
+
+/* footer css */
+
+footer{
+    background-color: #0B0223;
+    color:#ffffff;
+    padding: 5% 20%;
+    
+}
+.footer-section{
+    /* border: 2px solid greenyellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#footer-title{
+    color: white;
+    margin: 0;
+}
+.footer-section img{
+    width: 15%;
+    height: 15%;
+}
+
+.footer-nav-list{
+    /* border: 2px solid greenyellow; */
+    justify-content: space-between;
+    display: flex;
+}
+
+.footer-nav li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
 
 
 /* responsive styles */
