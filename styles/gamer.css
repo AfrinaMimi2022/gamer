@@ -8,6 +8,12 @@ body{
     color: #FF42A5;
 }
 
+.section-title{
+    color: #0B0223;
+    font-size: 45px;
+    font-weight: 700;
+}
+
 /* Header styles */
 header{
     padding: 0 200px;
@@ -19,9 +25,12 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-title>ul, .footer-nav>ul{
     display: flex;
+    align-items: center;
 }
+
 .nav-title li, .footer-nav>ul>li{
     list-style: none;
     margin-right: 30px;
@@ -32,23 +41,14 @@ nav{
 .nav-title, .footer-title{
     display: flex;
     align-items:center;
+    gap:10px;  
 }
+
 .nav-title li a{
     text-decoration: none;
     color: #3C354F;
     font-size: 18px;
     font-weight: 500;
-}
-
-.nav-img{
-    width: auto;
-    height: auto;
-}
-
-.section-title{
-    color: #0B0223;
-    font-size: 45px;
-    font-weight: 700;
 }
 
 .nav-btn{
@@ -65,27 +65,18 @@ nav{
 
 /* banner styles */
 .banner{
-    
     width: auto;
     background-color: #f4eaf3b9;
     display: flex;
-    padding: 5%;
+    padding: 6%;
 }
 .banner-section{
-    /* position: relative; */
-    /* border: 2px solid blue; */
-    width: 50%;
-   padding-left: 120px;
-   /* padding-top: 100px; */
-
+    width: 100%;
 }
-
 .banner-content{
-    /* border:2px solid #FF42A5; */
-    width: 50%;
-   
+    padding-left: 18%;
+    padding-top: 5%;
 }
-
 .banner-title{
     margin-bottom: 0;
     color: #0B0223;
@@ -107,12 +98,11 @@ background-clip: text;
 margin: none;
 }
 
-.banner-list{
+.banner-paragraph{
     list-style: none;
     gap:initial;
-    /* border: 2px solid rgb(108, 33, 206); */
     color: #534C64;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 500;
 }
 
@@ -141,6 +131,27 @@ margin: none;
     width:80%
 }
 
+/* gamer css */
+#gamer-img img{
+    width: 100%;
+    height: 100%;
+}
+
+#gamer-title{
+    font-size: 2.8rem;
+}
+#gamer-section{
+    text-align: end;
+    padding: 5% 20%;
+    
+}
+
+.unleash{
+    color: #534C64;
+font-size: 1.5rem;
+font-weight: 700;
+line-height: 45px;
+}
 
 
 
@@ -149,30 +160,27 @@ margin: none;
 footer{
     background-color: #0B0223;
     color:#ffffff;
-    padding: 5% 20%;
+    padding: 5% 27%;
     
 }
-.footer-section{
-    /* border: 2px solid greenyellow; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
+
 #footer-title{
     color: white;
-    margin: 0;
+    margin: 1%;
 }
-.footer-section img{
-    width: 15%;
-    height: 15%;
+#footer-logo{
+    justify-content: center;
+    padding: 3%;
 }
 
 .footer-nav-list{
     /* border: 2px solid greenyellow; */
-    justify-content: space-between;
+    justify-content: space-evenly;
     display: flex;
+    padding: none;
+    padding-bottom: 30px;
 }
+
 
 .footer-nav li a{
     text-decoration: none;
@@ -180,53 +188,88 @@ footer{
     font-weight: 600;
 }
 
+#footer-terms{
+    color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-size: .8rem;
+font-weight: 500;
+}
+
 
 
 /* responsive styles */
 /* mobile devices */
+
 @media screen and (max-width:576px) {
-    nav, .nav-title>ul{
+    header{
+        padding: 0 20%;
+        margin: none;
+    }
+    nav, .nav-title>ul, #gamer-banner{
         flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .nav-title img{
+        width: 30%;
     }
 
     .nav-title>ul{
-        line-height: 50px;
+        line-height: 40px;
         align-items: center;
-        margin-top: 0;
+        margin: 2%;
+        
     }
     .nav-btn{
         width: 180px;
-        text-align: center;
+        padding:0 12%;
     }
     .banner{
         width: auto;
-
         flex-direction:column-reverse;
         padding: 0;
     }
-    .banner-section{
-        width: 100%;
-    }
-
-    .banner-title{
+   
+    .banner-title, #gamer-title{
     font-size: 1.25rem;
     }
+     .banner-content{
+        text-align: center;
+        padding: 15px;
+    }
     
-    .goat{
-    font-size: 2.5rem;
+    .goat,.section-title{
+    font-size: 2.25rem;
     }
-    .banner-list{
-    font-size: 1.1rem;
+    
+    .banner-paragraph, #gamer-purpose{
+    font-size: .8rem;
     }
+    .nav-title>ul>li>a{
+        font-size: 1rem;
+    }
+
     .btn{
         border-radius: 48px;
         padding: 10px 20px;
-        font-size: .8rem;
+        font-size: .7rem;
     }
-    .banner-img img{
-        width:50%;
-        
+    
+    .banner-img img, #gamer-img img{
+        width:80%; 
+        margin: 15px 0;
+        padding-left: 10%;
     }
+
+    #gamer-section{
+        text-align: center;
+    }
+    .unleash{
+        font-size: .9rem;
+    }
+    /* #gamer-img img{
+        width: 80%;
+    } */
 }
 
 /* tablet or medium devices */
