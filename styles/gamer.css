@@ -14,6 +14,7 @@ body{
     font-weight: 700;
 }
 
+
 /* Header styles */
 header{
     padding: 0 200px;
@@ -80,9 +81,8 @@ nav{
 .banner-title{
     margin-bottom: 0;
     color: #0B0223;
-font-size: 2rem;
-font-weight: 600;
-text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
 /* border: 2px solid rgb(108, 33, 206); */
 }
 
@@ -137,13 +137,20 @@ margin: none;
     height: 100%;
 }
 
-#gamer-title{
+.gamer-title{
     font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 900;
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: none;
 }
 #gamer-section{
     text-align: end;
-    padding: 5% 20%;
-    
+    padding: 5% 20%; 
 }
 
 .unleash{
@@ -152,6 +159,150 @@ font-size: 1.5rem;
 font-weight: 700;
 line-height: 45px;
 }
+
+
+/* online game css */
+#online-game-image-section{
+    padding: 0 10%;
+}
+
+.online-game-container{
+    display: flex;
+    justify-content: space-around;
+    gap:2%;
+    text-align: center;
+   
+}
+
+.online-game-img-card-1{
+    width: 80%;
+}
+.online-game-img-card-2{
+    width: 95%;
+}
+.online-game-img-card-3{
+    width: 88%;
+}
+
+.online-game-img-card-1:hover,.online-game-img-card-2:hover,
+.online-game-img-card-3:hover{
+    /* background-color: #3C354F; */
+    background-color: orange;
+    color: white;
+    padding: 1px;
+    margin: 5px;
+    opacity: 0.5;
+    transition: 0.5s;
+    display: inline-block;
+    cursor: pointer;
+    overflow: hidden;
+    background-image: url('../images/circle-play-solid.svg');
+    
+}
+.online-game-img-card-1:hover>.online-btn{
+    z-index: none;
+}
+
+.online-btn
+{
+    display:grid;
+    width: 40%;
+    padding: 8px;
+    background-color: #F948B2;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 35%;
+    margin-top: -100px;
+    margin-bottom: 80px;
+    z-index: -1;
+}
+
+.online-game-title{
+    color: #0B0223;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top:none;
+    margin-bottom: 0;
+}
+
+#online-game-section{
+    text-align: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    display: flex;
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.online-game-img img{
+    width: 20%;
+}
+
+
+/* instant play css */
+
+#instant-title-section{
+    text-align: right;
+    padding: 150px;
+}
+
+.instant-badge{
+    width: 40%;
+    padding-left: -10%;
+    position: relative;
+    bottom: 270px;
+    right: 50px;
+}
+
+.instant-game-img img{
+    width: 70%;
+    height: 80%;
+    margin-top: 60px;
+}
+
+
+/* anywhere css */
+#anywhere-img{
+    padding-left: 20%;
+    width: 100%;
+}
+#anywhere-title{
+    text-align: left;
+}
+.anywhere-badge{
+    width: 40%;
+    padding-left: -10%;
+    position: relative;
+    bottom: 180px;
+    left: 300px;
+}
+
+
+/* career css */
+#career-container{
+    background-color: #FF42A5;
+    text-align: left;
+}
+
+.career-list{
+    display: flex;
+}
+
+.career-name{
+    text-align: left;
+}
+
+.career-address{
+    text-align: right;
+}
+
+
+
+
 
 
 
@@ -205,7 +356,7 @@ font-weight: 500;
         padding: 0 20%;
         margin: none;
     }
-    nav, .nav-title>ul, #gamer-banner{
+    nav, .nav-title>ul, #gamer-banner,.online-game-container{
         flex-direction: column;
         margin-bottom: 30px;
     }
@@ -218,7 +369,6 @@ font-weight: 500;
         line-height: 40px;
         align-items: center;
         margin: 2%;
-        
     }
     .nav-btn{
         width: 180px;
@@ -230,7 +380,7 @@ font-weight: 500;
         padding: 0;
     }
    
-    .banner-title, #gamer-title{
+    .banner-title, .online-game-title, .gamer-title{
     font-size: 1.25rem;
     }
      .banner-content{
@@ -264,14 +414,112 @@ font-weight: 500;
     #gamer-section{
         text-align: center;
     }
+    #gamer-title{
+        font-size: 1.25rem;
+        
+    }
     .unleash{
         font-size: .9rem;
     }
-    /* #gamer-img img{
-        width: 80%;
-    } */
+    .online-game-img-card-2{
+        width: 85%;
+    }
+    .online-game-container{
+        margin: none;
+    }
+    #instant-title-section{
+        padding: 10%;
+    }
+
+    #instant-title-section{
+        padding: none;
+    }
+
+    .instant-game-img img{
+        width: 70%;
+        padding-left: 16%;
+        margin: 0;
+        padding-bottom: none;
+    }
+
+    .instant-badge{
+        width: 40%;
+        padding-left: -10%;
+        position: relative;
+        bottom: 90px;
+        right: 10px;
+    }
+
 }
 
 /* tablet or medium devices */
 @media screen and (min-width:576px) and (max-width:960px) {
+    
+    body{
+        margin: 0;
+        width: 100%;
+    }
+    header{
+        padding: 0;
+        margin: none;
+        width:100%;
+        border: 2px solid red;
+    }
+    main{
+        width:100%;
+        border: 2px solid red;
+    }
+  #gamer-banner{
+        flex-direction: column;
+    }
+    nav{
+       padding: 0 5%;
+    }
+    .nav-title img{
+        width: 30%;
+    }
+    
+    .banner-title, .online-game-title, .gamer-title{
+        font-size: 1.25rem;
+        }
+         .banner-content{
+            text-align: center;
+            padding: 15px;
+        }
+    
+    .banner-title, .online-game-title, .gamer-title{
+        font-size: 2rem;
+        }
+
+        .goat,.section-title{
+            font-size: 2.25rem;
+            }
+            
+            .banner-paragraph, #gamer-purpose{
+            font-size: .8rem;
+            }
+            .nav-title>ul>li>a{
+                font-size: 1rem;
+            }
+
+        
+            .btn{
+                border-radius: 48px;
+                padding: 10px 20px;
+                font-size: .7rem;
+            }
+            
+            .banner-img img, #gamer-img img{
+                width:80%; 
+                margin: 15px 0;
+                padding-left: 10%;
+            }
+            .online-game-title{
+            
+                margin-top:none;
+                margin-bottom: 0;
+                padding-left: none;
+            }
+            
+        
 }
