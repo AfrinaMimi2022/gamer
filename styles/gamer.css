@@ -278,7 +278,6 @@ line-height: 45px;
 }
 .anywhere-badge{
     width: 40%;
-    padding-left: -10%;
     position: relative;
     bottom: 180px;
     left: 300px;
@@ -324,7 +323,6 @@ line-height: 45px;
     display: grid;
 }
 
- 
 .game-type-cart{
     display: flex;
     flex-wrap: wrap;
@@ -499,40 +497,39 @@ font-weight: 500;
         width: 40%;
         position: relative;
         bottom: 100px;
-        left: 250px;
+        left: 220px;
     }
 
     #online-section{
-        border: 5px solid red;
         margin-right: 20%;
         margin-top: none;
     }
 
     .career-section {
         width: auto;
-}
-.career-content{
-    padding: 20px;
-    margin: none;
-}
-
-.game-cart{
-    width:80px;
-}
-
-.game-type-cart{
-    display: flex;
-    flex-wrap: wrap;
-    gap:50px;
-    padding: 20px 50px;
-    /* border: 2px solid rgb(24, 180, 58); */
-}
-
-.game-type-img{
-    height: 60px;
-    width: 60px;
-    gap:2px;    
-} 
+    }
+    
+    .career-content{
+        padding: 20px;
+        margin: none;
+    }
+    
+    .game-cart {
+        width:80px;
+    }
+    
+    .game-type-cart{
+        display: flex;
+        flex-wrap: wrap;
+        gap:50px;
+        padding: 20px 50px;
+    }
+    
+    .game-type-img{
+        height: 60px;
+        width: 60px;
+        gap:2px;   
+    } 
 
 /* footer css */
 
@@ -609,21 +606,22 @@ font-weight: 500;
             text-align: center;
             padding: 15px;
         }
-    
-    .banner-title, .online-game-title, .gamer-title{
-        font-size: 2rem;
+        
+        .banner-title, .online-game-title, .gamer-title{
+            font-size: 2rem;
         }
 
         .goat,.section-title{
             font-size: 2.25rem;
-            }
+        }
             
-            .banner-paragraph, #gamer-purpose{
+        .banner-paragraph, #gamer-purpose{
             font-size: .8rem;
-            }
-            .nav-title>ul>li>a{
-                font-size: 1rem;
-            }
+        }
+        
+        .nav-title>ul>li>a{
+            font-size: 1rem;
+        }
 
         
             .btn{
@@ -633,16 +631,90 @@ font-weight: 500;
             }
             
             .banner-img img, #gamer-img img{
-                width:80%; 
+                width:100%; 
                 margin: 15px 0;
                 padding-left: 10%;
             }
+
             .online-game-title{
             
                 margin-top:none;
                 margin-bottom: 0;
                 padding-left: none;
             }
-            
+
+            #instant-title-section{
+                padding:  0 15%;
+            }
+
+            .instant-game-img{
+                padding-right: 5%;
+                padding-top: 5%;
+            }
         
+            .instant-game-img img{
+                width: 60%;
+                margin-top: 10px;
+            }
+        
+            .instant-badge{
+                width: 40%;
+                padding-left: -10%;
+                position: relative;
+                bottom: 90px;
+                right: 10px;
+            }
+
+
+
+            #anywhere-img{
+                padding-left: 20%;
+                width: 120%;
+                padding-top: 100px;
+            }
+
+            .anywhere-badge{
+                width: 40%;
+                left: 60%;
+                position: relative;
+                bottom: 80px;
+            }
+
+
+           
+      
+            /* career css */
+            .career-section{
+                width: 50%;
+            }
+            
+            .career-content{
+                padding: 10% 0 10% 20%;
+            }
+            
+            .career-section img{
+                margin-top: 60%;
+            }
+
+            .game-cart{
+                width:100px;
+            }
+            
+            .game-type-cart{
+                display: flex;
+                flex-wrap: wrap;
+                gap:50px;
+                padding: 20px 50px;
+            }
+            
+            .game-type-img{
+                height: 60px;
+                width: 60px;
+                gap:2px;    
+            } 
+                 
+            footer{ 
+                padding: 5% 10%;  
+            }
+       
 }
