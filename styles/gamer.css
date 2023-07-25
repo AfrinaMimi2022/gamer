@@ -321,26 +321,26 @@ line-height: 45px;
 
 /* game type css */
 .game-types-section{
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    display: grid;
 }
 
-.gametype-cart{
+ 
+.game-type-cart{
     display: flex;
+    flex-wrap: wrap;
     gap:50px;
     padding: 20px 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+
 .game-cart{
+    width:200px;
     display: flex;
-    gap:5px;
+    justify-content: center;
 }
-
-
-
-
-
-
 
 
 /* footer css */
@@ -361,7 +361,7 @@ footer{
     padding: 3%;
 }
 
-.footer-nav-list{
+.footer-nav-list, .footer-nav-list-1{
     /* border: 2px solid greenyellow; */
     justify-content: space-evenly;
     display: flex;
@@ -491,52 +491,89 @@ font-weight: 500;
     }
 
     #anywhere-img{
-        padding-left: none;
-        /* width: 100%; */
+        /* padding-left: none; */
+        margin-left: -25%;
     }
 
-    #anywhere-img{
-        margin-left: -15%;
-    }
-   
     .anywhere-badge{
         width: 40%;
         position: relative;
         bottom: 100px;
-        left: 230px;
+        left: 250px;
+    }
+
+    #online-section{
+        border: 5px solid red;
+        margin-right: 20%;
+        margin-top: none;
     }
 
     .career-section {
         width: auto;
-    border: 2px solid greenyellow;    
 }
 .career-content{
-    padding: 10px;
+    padding: 20px;
     margin: none;
 }
 
-.game-types-section{
-    display:grid;
-    flex-direction:column;
+.game-cart{
+    width:80px;
 }
 
-/* .gametype-cart{
+.game-type-cart{
     display: flex;
+    flex-wrap: wrap;
     gap:50px;
     padding: 20px 50px;
-}*/
+    /* border: 2px solid rgb(24, 180, 58); */
+}
 
 .game-type-img{
-    display: grid;
-    flex-direction: column;
-    width: 60px;
     height: 60px;
-    height: auto;
-    gap:2px;
+    width: 60px;
+    gap:2px;    
 } 
 
+/* footer css */
+
+footer{ 
+    padding: 5% 15%;  
+}
+
+.footer-nav-list, .footer-nav-list-1{
+    /* border: 2px solid greenyellow; */
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.footer-nav-list-1{
+    /* border: 2px solid greenyellow; */
+    gap:50px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+
+padding:0 15%;
+}
+
+.footer-nav li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#footer-terms{
+    color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-size: .8rem;
+font-weight: 500;
+}
 
 }
+
+
 
 /* tablet or medium devices */
 @media screen and (min-width:576px) and (max-width:960px) {
