@@ -3,14 +3,24 @@ body{
     font-family: 'Work Sans', sans-serif;
 }
 
+:root{
+    --primary-color:#FF42A5;
+    --section-color:#0B0223;
+    --third--color: #3C354F;
+    --primary-font-weight-semibold: 700;
+    --secondary-font-weight-normal: 500;
+    --bold-font-weight: 900;
+    --font-size-large: 2.8rem;
+}
+
 .primary-font-color{
-    color: #FF42A5;
+    color: var(--primary-color);
 }
 
 .section-title{
-    color: #0B0223;
-    font-size: 45px;
-    font-weight: 700;
+    color: var(--section-color);
+    font-size: var(--font-size-large);
+    font-weight: var(--primary-font-weight-semibold);
 }
 
 
@@ -33,7 +43,7 @@ nav{
 
 .nav-title li, .footer-nav>ul>li{
     list-style: none;
-    font-weight: 700;
+    font-weight: var(--primary-font-weight-semibold);
     font-size: 1rem;
 }
 
@@ -45,9 +55,9 @@ nav{
 
 .nav-title li a{
     text-decoration: none;
-    color: #3C354F;
-    font-size: 18px;
-    font-weight: 500;
+    color: var(--third--color);
+    font-size: 1rem;
+    font-weight: var(--secondary-font-weight-normal);
 }
 
 .nav-btn{
@@ -77,16 +87,16 @@ nav{
 
 .banner-title, .online-game-title{
     margin-bottom: 0;
-    color: #0B0223;
+    color:var(--section-color);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: var(--primary-font-weight-semibold);
 }
 
 .goat{
     margin-top: 0;
     margin-bottom: 0;
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: var(--bold-font-weight);
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -96,7 +106,7 @@ nav{
 .banner-paragraph{
     color: #534C64;
     font-size: .9rem;
-    font-weight: 500;
+    font-weight: var(--secondary-font-weight-normal);
 }
 
 .banner-btn{
@@ -110,7 +120,7 @@ nav{
     border:none;
     color:white;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: var(--primary-font-weight-semibold);
     text-transform: uppercase;
 }
 
@@ -131,10 +141,10 @@ nav{
 }
 
 .gamer-title{
-    font-size: 2.8rem;
+    font-size: var(--font-size-large);
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 900;
+    font-weight: var(--bold-font-weight);
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -142,9 +152,9 @@ nav{
 }
 
 .unleash{
-    color: #534C64;
+    color: var(--third--color);
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: var(--primary-font-weight-semibold);
     line-height: 45px;
 }
 
@@ -161,7 +171,7 @@ nav{
 }
 
 .online-game-title{
-    font-size: 2.8rem;
+    font-size: var(--font-size-large);
     margin-top:none;
     margin-bottom: none;
 }
@@ -171,6 +181,7 @@ nav{
 }
 
 .online-game-container{
+    position: relative;
     display: flex;
     justify-content: space-around;
     gap:2%;
@@ -178,53 +189,87 @@ nav{
     background-color: #f4eaf3b9;
 }
 
+
 .online-game-img-card-1{
+    position: relative;
+    z-index: 2;
     width: 80%;
+    
 }
 .online-game-img-card-2{
     width: 95%;
+    position: relative;
+    z-index: 2;
 }
 .online-game-img-card-3{
     width: 88%;
+    position: relative;
+    z-index: 2;
 }
 
 .online-btn
 {
     display:grid;
     width: 40%;
+    height: auto;
     padding: 8px;
-    background-color: #F948B2;
-    color: #ffffff;
-    font-weight: 700;
+    background-color: var(--primary-color);
+    /* color: rgba(0, 0, 0, 0.252); */
+    font-weight: var(--primary-font-weight-semibold);
     border: none;
     border-radius: 5px;
     position: relative;
     margin-left: 35%;
     margin-top: -100px;
     margin-bottom: 80px;
-    z-index: -1;
+    z-index: 1;
+    transition: transform 1s ease-out 5s ;
+}
+
+.circle-button{
+    transition: transform 1s ease-out 5s ;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-left: 10%;
+    margin-top: -200px;
+    margin-bottom: 180px;
+    z-index: 1;
 }
 
 /* hover section */
+.online-game-img-card:hover .online-game-img-card-1{
+    transform: scale(1.1);
+    transition: transform 3s;
+    border: 5px solid var(--primary-color);
+    color: rgba(32, 31, 31, 0.379);
+    /* padding: 1px;
+    margin: 5px; */
+    display: block;
+            background-color: rgba(218, 165, 32, .6);
+    opacity: 0.3;
+    /* display: inline-block; */
+    cursor: pointer;
+    overflow: hidden;
+    z-index: -1;
+    background-image: url('../images/circle-play-solid.svg');
+}
+
+
 .online-game-img-card-1:hover,.online-game-img-card-2:hover,
 .online-game-img-card-3:hover{
-   
+    border: 5px solid var(--primary-color);
     color: white;
     padding: 1px;
     margin: 5px;
     opacity: 0.5;
-    transition: 0.5s;
+    transform:translate(40px);
     display: inline-block;
     cursor: pointer;
     overflow: hidden;
+    z-index: -1;
     background-image: url('../images/circle-play-solid.svg');
-    
 }
-.online-game-img-card-1:hover{
-    z-index: 1;
-    /* background-image: url('../images/circle-play-solid.svg'); */
-}
-
 
 /* instant play css */
 
@@ -280,7 +325,7 @@ nav{
 
 /* career css */
 #career-container{
-    background-color: #FF42A5;
+    background-color: var(--primary-color);
     text-align: left;
 }
 
@@ -293,8 +338,8 @@ nav{
 }
 
 .career-title{
-    font-size: 2.8rem;
-    font-weight: 700;
+    font-size: var(--font-size-large);
+    font-weight: var(--primary-font-weight-semibold);
 }
 
 .career-list{
@@ -333,15 +378,20 @@ nav{
 }
 
 .game-cart:hover{
-    border: 2px solid  #FF42A5;
+    border: 2px solid  var(--primary-color);
     border-radius: 30px;
 }
+.game-cart:hover p{
+    color: var(--primary-color);
+
+}
+
 
 
 /* footer css */
 
 footer{
-    background-color: #0B0223;
+    background-color:var(--section-color);
     color:#ffffff;
     padding: 5% 27%;
     
@@ -374,7 +424,7 @@ footer{
     color: rgba(255, 255, 255, 0.60);
     text-align: center;
     font-size: .8rem;
-    font-weight: 500;
+    font-weight: var(--secondary-font-weight-normal);
 }
 
 
